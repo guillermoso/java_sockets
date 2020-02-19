@@ -95,10 +95,16 @@ public class Model {
         if (queryParts.length > 2 || queryParts.length < 2)
             return "0|";
 
+        // if the column recieved isnt a number an exception will be thrown
         try {
             column     = Integer.parseInt(queryParts[0]);
             moviesName = queryParts[1];
         } catch (Exception e) {
+            return "0|";
+        }
+
+        // if an invalid column is received, nothing will be searched
+        if(column > 8 || column < 0) {
             return "0|";
         }
 

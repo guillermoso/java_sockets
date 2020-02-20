@@ -9,10 +9,10 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        Integer port = Integer.parseInt(args[0]);
+        // Integer port = Integer.parseInt(args[0]);
         // start server
         Server server = new Server();
-        server.start(port);
+        server.start(60000);
     }
 
     private void start(int port) throws IOException {
